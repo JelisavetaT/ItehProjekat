@@ -1,0 +1,26 @@
+.guestsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.guestsContainer > input {
+  border-radius: 5px;
+  width: 90%;
+  height: 30px;
+  font-size: 20px;
+}
+
+.coupon {
+  border: solid 2px #003580;
+  border-radius: 5px;
+  color: #003580;
+  height: 30px;
+  font-size: 20px;
+}
+
+.coupon::placeholder {
+  color: #003580;
+}
