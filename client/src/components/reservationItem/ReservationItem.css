@@ -1,0 +1,47 @@
+.reservationItemList {
+  padding: 20px;
+  border: solid 2px #e3e3e3;
+  border-radius: 10px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 80vw;
+}
+
+.completedRes {
+  background-color: rgb(116, 228, 116);
+}
+
+.reservationNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 50px;
+}
+
+.deleteBtn {
+  border: none;
+  background: transparent;
+  color: red;
+  cursor: pointer;
+}
+
+.deleteBtn:disabled {
+  color: gray;
+  cursor: not-allowed;
+}
+
+.guestsBtn {
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.guestsListContainer {
+  width: 350px;
+}
+
+.guestsListContainer > h2 {
+  margin-bottom: 10px;
+}
