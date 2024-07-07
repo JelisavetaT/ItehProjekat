@@ -148,7 +148,9 @@ const Reserve = ({ setOpen, hotelId, price }) => {
         } in ${
           hotelRes.data.city.charAt(0).toUpperCase() +
           hotelRes.data.city.slice(1)
-        } from ${dates[0].startDate} to ${dates[0].endDate}.  Enjoy your stay!`,
+        } from ${dates[0]?.startDate} to ${
+          dates[0]?.endDate
+        }.  Enjoy your stay!`,
         subject: 'Booking ORDER',
       });
 
@@ -186,7 +188,7 @@ const Reserve = ({ setOpen, hotelId, price }) => {
           <span>Select your rooms:</span>
           {data
             ?.filter(
-              (item) => item.maxPeople >= options.adult + options.children
+              (item) => item?.maxPeople >= options.adult + options.children
             )
             .map((item) => (
               <div className='rItem' key={item._id}>
@@ -194,9 +196,9 @@ const Reserve = ({ setOpen, hotelId, price }) => {
                   <div className='rTitle'>{item.title}</div>
                   <div className='rDesc'>{item.desc}</div>
                   <div className='rMax'>
-                    {item.maxPeople && (
+                    {item?.maxPeople && (
                       <span>
-                        Max people: <b>{item.maxPeople}</b>
+                        Max people: <b>{item?.maxPeople}</b>
                       </span>
                     )}
                   </div>
@@ -219,7 +221,7 @@ const Reserve = ({ setOpen, hotelId, price }) => {
             ))}
           {formError && <span className='rFormError'>{formError}</span>}
           {data.filter(
-            (item) => item.maxPeople >= options.adult + options.children
+            (item) => item?.maxPeople >= options.adult + options.children
           ).length === 0 ? (
             <b> No rooms available!</b>
           ) : (
